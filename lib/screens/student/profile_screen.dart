@@ -689,21 +689,25 @@ class _ProfileScreenState extends State<ProfileScreen> {
           physics: AlwaysScrollableScrollPhysics(),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(height: 20),
-              _buildProfileHeader(),
-              SizedBox(height: 24),
-              _buildSettingsSection(),
-                SizedBox(height: 24),
-                Text(
-                  "Yorumlarınız",
-                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                        fontWeight: FontWeight.bold,
-                      ),
-                ),
-                SizedBox(height: 16),
-                _buildCommentsSection(),
-              ],
+children: [
+  SizedBox(height: 20),
+  _buildProfileHeader(),
+  SizedBox(height: 24),
+  _buildSettingsSection(),
+  SizedBox(height: 24),
+  Padding(
+    padding: EdgeInsets.symmetric(horizontal: 16.0), // Sol ve sağa 16 birim boşluk
+    child: Text(
+      "Yorumlarınız",
+      style: Theme.of(context).textTheme.titleLarge?.copyWith(
+            fontWeight: FontWeight.bold,
+          ),
+    ),
+  ),
+  SizedBox(height: 16),
+  _buildCommentsSection(),
+],
+
             
           ),
         ),
